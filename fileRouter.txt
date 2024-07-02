@@ -1,0 +1,33 @@
+'''
+python subprocess argparse
+python scan_and_process.py <directory_path> process_file.py
+'''
+
+import os
+import subprocess
+import argparse
+
+def scan_directory(directory, process_script):
+    # 遍历指定目录中的所有文件
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            file_path = os.path.join(root, file)
+            # 调用处理程序处理文件
+            subprocess.run(["python", process_script, file_path])
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Scan directory and process files with specified script.")
+    parser.add_argument("directory", help="The directory to scan for files.")
+    parser.add_argument("process_script", help="The Python script to process each file.")
+    
+    args = parser.parse_args()
+    
+    if not os.path.isdir(args.directory):
+        print(f"Error: The directory {args.directory} does not exist.")
+        sys.exit(1)
+    
+    if not os.path.isfile(args.process_script):
+        print(f"Error: The script {args.process_script} does not exist.")
+        sys.exit(1)
+    
+    scan_directory(args.directory, args.process_script)

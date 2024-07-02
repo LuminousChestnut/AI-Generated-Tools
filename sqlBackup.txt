@@ -1,0 +1,8 @@
+完全备份
+mysqldump -u [username] -p[password] --single-transaction [database_name] > full_backup.sql
+
+增量备份
+mysqlbinlog --read-from-remote-server --raw --stop-never mysql-bin.[binlog_file] > incremental_backup.sql
+
+差异备份
+mysqldump -u [username] -p[password] --single-transaction --master-data=2 [database_name] > differential_backup.sql

@@ -1,0 +1,164 @@
+常见 CMD 命令及其功能
+
+1. dir
+列出目录中的文件和子目录。
+命令:
+dir
+
+2. cd / chdir
+更改当前目录。
+命令:
+cd path\to\directory
+cd ..
+
+3. md / mkdir
+创建新目录。
+命令:
+md new_directory
+mkdir new_directory
+
+4. rd / rmdir
+删除目录。
+命令:
+rd directory_name
+rmdir directory_name
+
+5. del / erase
+删除一个或多个文件。
+命令:
+del filename
+erase filename
+
+6. copy
+复制一个或多个文件到另一位置。
+命令:
+copy source_file destination_file
+copy *.txt destination_directory
+
+7. move
+移动文件或重命名文件。
+命令:
+move source_file destination_file
+move old_filename new_filename
+
+8. ren / rename
+重命名文件或目录。
+命令:
+ren old_filename new_filename
+rename old_directory new_directory
+
+9. type
+显示文件内容。
+命令:
+type filename
+
+10. more
+逐屏显示文件内容。
+命令:
+more filename
+
+11. find
+搜索文件中的文本字符串。
+命令:
+find "search_text" filename
+
+12. cls
+清屏。
+命令:
+cls
+
+13. echo
+显示消息，或打开/关闭命令回显。
+命令:
+echo Hello, World!
+echo off
+echo on
+
+14. set
+显示、设置或删除环境变量。
+命令:
+set variable_name=value
+set
+
+15. pause
+暂停批处理文件的执行并显示消息。
+命令:
+pause
+
+16. tasklist
+显示当前运行的所有任务。
+命令:
+tasklist
+
+17. taskkill
+结束一个或多个任务。
+命令:
+taskkill /F /IM process_name.exe
+taskkill /PID process_id
+
+18. ipconfig
+显示网络适配器的 IP 配置。
+命令:
+ipconfig
+
+19. ping
+测试与另一个网络主机的连通性。
+命令:
+ping hostname_or_ip
+
+20. tracert
+跟踪数据包到达目标主机的路径。
+命令:
+tracert hostname_or_ip
+
+21. netstat
+显示网络连接、路由表和接口统计信息。
+命令:
+netstat -a
+
+22. nslookup
+查询域名服务器（DNS）以获得域名或 IP 地址映射。
+命令:
+nslookup domain_name
+
+23. systeminfo
+显示计算机的详细配置信息。
+命令:
+systeminfo
+
+24. sfc
+扫描系统文件的完整性并修复损坏的文件。
+命令:
+sfc /scannow
+
+25. chkdsk
+检查磁盘并显示状态报告。
+命令:
+chkdsk
+
+26. shutdown
+关闭或重启计算机。
+命令:
+shutdown /s /t 0  (立即关机)
+shutdown /r /t 0  (立即重启)
+
+27. fc
+比较两个文件或文件集并显示其差异。
+命令:
+fc file1 file2
+
+28. attrib
+显示或更改文件属性。
+命令:
+attrib +r filename  (将文件设为只读)
+attrib -r filename  (取消文件的只读属性)
+
+29. title
+设置命令提示符窗口的标题。
+命令:
+title New Command Prompt Title
+
+30. color
+设置命令提示符的前景和背景颜色。
+命令:
+color 0A  (黑色背景，绿色前景)

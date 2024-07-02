@@ -1,0 +1,127 @@
+常见 VBS 命令及其功能
+
+1. MsgBox
+显示一个消息框。
+示例:
+MsgBox "Hello, World!"
+
+2. InputBox
+显示一个输入框，并返回用户输入的内容。
+示例:
+userInput = InputBox("Enter your name:")
+
+3. CreateObject
+创建一个 COM 对象实例。
+示例:
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+
+4. Set
+将对象引用赋值给变量。
+示例:
+Set objShell = CreateObject("WScript.Shell")
+
+5. GetObject
+返回一个现有的 COM 对象的引用。
+示例:
+Set objExcel = GetObject(, "Excel.Application")
+
+6. Dim
+声明变量。
+示例:
+Dim myVar
+
+7. If...Then...Else
+条件语句，用于执行基于条件的代码。
+示例:
+If condition Then
+    ' code to execute if condition is true
+Else
+    ' code to execute if condition is false
+End If
+
+8. For...Next
+循环语句，用于重复执行代码块。
+示例:
+For i = 1 To 10
+    ' code to execute in loop
+Next
+
+9. Do...Loop
+循环语句，用于重复执行代码块，直到满足某个条件。
+示例:
+Do While condition
+    ' code to execute in loop
+Loop
+
+10. Select Case
+条件语句，用于执行基于多个条件的代码块。
+示例:
+Select Case var
+    Case 1
+        ' code to execute if var = 1
+    Case 2
+        ' code to execute if var = 2
+    Case Else
+        ' code to execute if var is something else
+End Select
+
+11. Sub
+定义一个子过程。
+示例:
+Sub MySub()
+    ' code to execute
+End Sub
+
+12. Function
+定义一个函数过程。
+示例:
+Function MyFunction()
+    ' code to execute
+    MyFunction = returnValue
+End Function
+
+13. On Error Resume Next
+错误处理语句，忽略运行时错误并继续执行。
+示例:
+On Error Resume Next
+
+14. WScript.Echo
+向控制台输出文本。
+示例:
+WScript.Echo "Hello, World!"
+
+15. WScript.Sleep
+暂停脚本执行指定的时间（以毫秒为单位）。
+示例:
+WScript.Sleep 1000
+
+16. FileSystemObject
+用于操作文件系统的对象。
+示例:
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+Set objFile = objFSO.OpenTextFile("file.txt", 1)
+
+17. WScript.Arguments
+访问传递给脚本的命令行参数。
+示例:
+arg1 = WScript.Arguments(0)
+
+18. With
+执行一个对象的多个属性或方法。
+示例:
+With objExcel
+    .Visible = True
+    .Workbooks.Add
+End With
+
+19. WshShell.Run
+运行外部程序或命令。
+示例:
+Set objShell = CreateObject("WScript.Shell")
+objShell.Run "notepad.exe"
+
+20. WshShell.AppActivate
+激活一个应用程序窗口。
+示例:
+Set objShell = CreateObject("WScript.Shell")
+objShell.AppActivate "Untitled - Notepad"
